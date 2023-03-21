@@ -13,7 +13,6 @@ class Main {
 
 class Solution {
     public int[] replaceElements(int[] arr) {
-        // use last element as temp
         int lastIndex = arr.length - 1;
         int max = arr[lastIndex];
         for (int i = arr.length - 2; i >= 0; i--) {
