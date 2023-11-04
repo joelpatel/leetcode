@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println(lengthOfLongestSubstringMap("abcabcbb"))
 	fmt.Println(lengthOfLongestSubstring("abcabcbb"))
 }
 
