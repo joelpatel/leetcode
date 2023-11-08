@@ -1,25 +1,4 @@
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) {
-        this.val = val;
-    }
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    @java.lang.Override
-    public java.lang.String toString() {
-        return "{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
-    }
-}
-
-class Main {
+public class Main {
     public static void main(String[] args) {
         System.out.println("206. Reverse Linked List");
 
@@ -35,27 +14,53 @@ class Main {
     }
 }
 
-class Solution {
-    public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode previous, current, next;
-        previous = null;
-        current = head;
-        next = head.next;
+class ListNode {
+    int val;
+    ListNode next;
+    
+    ListNode() {}
+    
+    ListNode(int val) {
+        this.val = val;
+    }
+    
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
 
-        while (current.next != null) {
-            current.next = previous;
-            previous = current;
-            current = next;
-            next = next.next;
-        }
-
-        if (current != null) {
-            current.next = previous;
-        }
-
-        return current;
+    @Override
+    public String toString() {
+        return "{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
     }
 }
+
+
+// 1
+// class Solution {
+//     public ListNode reverseList(ListNode head) {
+//         if (head == null || head.next == null) {
+//             return head;
+//         }
+//         ListNode previous, current, next;
+//         previous = null;
+//         current = head;
+//         next = head.next;
+
+//         while (current.next != null) {
+//             current.next = previous;
+//             previous = current;
+//             current = next;
+//             next = next.next;
+//         }
+
+//         if (current != null) {
+//             current.next = previous;
+//         }
+
+//         return current;
+//     }
+// }
