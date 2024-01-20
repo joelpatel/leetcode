@@ -1,6 +1,8 @@
 function isNil(element) {
     if (element === undefined || element === null) {
         return true;
+    } else {
+        return false;
     }
 }
 
